@@ -1,0 +1,52 @@
+{
+  "name": "broccoli-misvg",
+  "version": "0.0.0",
+  "description": "Combines multiple SVG files into one JS object with SVG sprites as string properties",
+  "main": "index.js",
+  "xo": {
+    "globals": [
+      "describe",
+      "it",
+      "afterEach"
+    ],
+    "rules": {
+      "no-new": "off"
+    }
+  },
+  "scripts": {
+    "pretest": "xo index.js test/index.js",
+    "test": "./node_modules/.bin/_mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vastec/broccoli-misvg.git"
+  },
+  "keywords": [
+    "broccoli-plugin",
+    "svg",
+    "inline",
+    "maintainable"
+  ],
+  "author": "Tomasz Nieżurawski <tomasz@niezurawski.pl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vastec/broccoli-misvg/issues"
+  },
+  "homepage": "https://github.com/vastec/broccoli-misvg#readme",
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-es2015": "^6.18.0",
+    "broccoli-babel-transpiler": "^5.6.2",
+    "broccoli-caching-writer": "3.0.0",
+    "broccoli-kitchen-sink-helpers": "0.3.1",
+    "misvg": "^0.1.0",
+    "mkdirp": "^0.5.1",
+    "object-assign": "4.1.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "^3.0.2",
+    "xo": "^0.17.1"
+  }
+}
