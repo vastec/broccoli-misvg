@@ -1,6 +1,6 @@
 {
   "name": "broccoli-misvg",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Combines multiple SVG files into one JS object with SVG sprites as string properties",
   "main": "index.js",
   "xo": {
