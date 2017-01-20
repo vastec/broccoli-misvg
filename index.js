@@ -8,6 +8,7 @@ var Plugin = require('broccoli-caching-writer');
 var helpers = require('broccoli-kitchen-sink-helpers');
 var svgstore = require('misvg');
 var babel = require('babel-core');
+var es2015 = require('babel-preset-es2015');
 
 var defaultSettings = {
 	outputFile: '/svg-sprites.js',
@@ -88,7 +89,7 @@ MisvgPlugin.prototype.build = function () {
 
 	var sprites = 'var MISVG_STORE = ' + svgOutput.getObjectString() + ';';
 	var result = babel.transform(sprites, {
-		presets: ['es2015']
+		presets: [es2015]
 	});
 
 	return fs.writeFileSync(outputDestination, result.code);
